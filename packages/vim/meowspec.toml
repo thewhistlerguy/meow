@@ -6,6 +6,6 @@ release     = 1
 summary     = "Vi IMproved text editor"
 license     = "Vim"
 source_url  = "https://github.com/vim/vim/archive/refs/tags/v9.1.0.tar.gz"
-sha256      = "8b9d9b6c3a8f8e4f6d9c7b5a2e1d0c3f4a7b8e9d2c5f6a1b4e7d0c3f6a9b2e5"
+sha256      = "ddb435f6e386c53799a3025bdc5a3533beac735a0ee596cb27ada97366a1c725"
 depends       = ["musl", "ncurses"]
 build_depends = ["gcc", "make", "ncurses-dev"]
