@@ -1,0 +1,11 @@
+# packages/ncurses/meowspec.toml
+[package]
+name        = "ncurses"
+version     = "6.5"
+release     = 1
+summary     = "Terminal handling library"
+license     = "MIT"
+source_url  = "https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz"
+sha256      = "169cb8e8cadeef518c0e7795ed9e632e2f943650b2bab53e1ecad8d38cb0e4f7"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
