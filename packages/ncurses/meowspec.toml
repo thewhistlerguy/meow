@@ -1,7 +1,7 @@
 # packages/ncurses/meowspec.toml
 [package]
 name        = "ncurses"
-version     = "6.5"
+version     = "6.6"
 release     = 1
 summary     = "Terminal handling library"
 license     = "MIT"
