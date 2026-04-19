@@ -6,6 +6,6 @@ release     = 1
 summary     = "Small friendly text editor"
 license     = "GPL-3.0"
 source_url  = "https://www.nano-editor.org/dist/v8/nano-8.0.tar.xz"
-sha256      = "8b4f45e3b9c2a1d0e6f7c4b3a2e9d8c7f6b5a4e3d2c1b0a9f8e7d6c5b4a3e2d1"
+sha256      = "c17f43fc0e37336b33ee50a209c701d5beb808adc2d9f089ca831b40539c9ac4"
 depends       = ["musl", "ncurses"]
 build_depends = ["gcc", "make", "ncurses-dev"]
