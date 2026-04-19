@@ -1,0 +1,11 @@
+# packages/readline/meowspec.toml
+[package]
+name        = "readline"
+version     = "8.2"
+release     = 1
+summary     = "GNU readline library"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz"
+sha256      = "3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35"
+depends       = ["musl", "ncurses"]
+build_depends = ["gcc", "make", "ncurses-dev"]
