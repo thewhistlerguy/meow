@@ -1,6 +1,38 @@
 {
   "repo": "main",
   "packages": {
+    "musl": {
+      "name": "musl",
+      "version": "1.2.5",
+      "release": 1,
+      "summary": "Lightweight C standard library",
+      "depends": [],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/musl-1.2.5.meow"
+    },
+    "zlib": {
+      "name": "zlib",
+      "version": "1.3.1",
+      "release": 1,
+      "summary": "Compression library",
+      "depends": ["musl"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/zlib-1.3.1.meow"
+    },
+    "ncurses": {
+      "name": "ncurses",
+      "version": "6.5",
+      "release": 1,
+      "summary": "Terminal handling library",
+      "depends": ["musl"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/ncurses-6.5.meow"
+    },
+    "readline": {
+      "name": "readline",
+      "version": "8.2",
+      "release": 1,
+      "summary": "GNU readline library",
+      "depends": ["musl", "ncurses"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/readline-8.2.meow"
+    },
     "bash": {
       "name": "bash",
       "version": "5.2.21",
@@ -8,6 +40,30 @@
       "summary": "The GNU Bourne Again shell",
       "depends": ["musl", "readline", "ncurses"],
       "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/bash-5.2.21.meow"
+    },
+    "vim": {
+      "name": "vim",
+      "version": "9.1.0",
+      "release": 1,
+      "summary": "Vi IMproved text editor",
+      "depends": ["musl", "ncurses"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/vim-9.1.0.meow"
+    },
+    "nano": {
+      "name": "nano",
+      "version": "8.0",
+      "release": 1,
+      "summary": "Small friendly text editor",
+      "depends": ["musl", "ncurses"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/nano-8.0.meow"
+    },
+    "busybox": {
+      "name": "busybox",
+      "version": "1.36.1",
+      "release": 1,
+      "summary": "Tiny userland utilities",
+      "depends": ["musl"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/busybox-1.36.1.meow"
     }
   }
 }
