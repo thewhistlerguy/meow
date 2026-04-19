@@ -1,0 +1,13 @@
+{
+  "repo": "main",
+  "packages": {
+    "bash": {
+      "name": "bash",
+      "version": "5.2.21",
+      "release": 1,
+      "summary": "The GNU Bourne Again shell",
+      "depends": ["musl", "readline", "ncurses"],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/bash-5.2.21.meow"
+    }
+  }
+}
