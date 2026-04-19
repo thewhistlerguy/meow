@@ -1,11 +1,11 @@
 # packages/musl/meowspec.toml
 [package]
 name        = "musl"
-version     = "1.2.6"
+version     = "1.2.5"
 release     = 1
 summary     = "Lightweight C standard library"
 license     = "MIT"
-source_url  = "https://musl.libc.org/releases/musl-1.2.6.tar.gz"
-sha256      = "c8e6a0d4c1566fd2f416e91f6e2b260f855a5392fe19e8cf9983f4f89d71ad34"
+source_url  = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+sha256      = "a9a118bbe84d8764da0ea0d28b3ab3fae8477fc7e4085d90102b8596fc7c75e4"
 depends       = []
 build_depends = ["gcc", "make"]
