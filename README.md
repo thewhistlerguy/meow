@@ -1,35 +1,8 @@
-## Quick Start
-
-> **Requirements:** Linux host (any distro), root access, ~20 GB free on target partition, gcc, make, wget, tar, python3 ≥ 3.11.
-
-```bash
-# 1. Mount your target partition
-mount /dev/sdXY /mnt/pixelos
-
-# 2. Clone this repo
-git clone https://github.com/youruser/pixelos
-cd pixelos
-
-# 3. Run the bootstrap (takes 2–4 hours)
-sudo bash lfs-bootstrap.sh --target /mnt/pixelos
-```
-
-After the bootstrap completes, chroot in and start building:
-
-```bash
-chroot /mnt/pixelos \
-    /usr/bin/env -i HOME=/root TERM=xterm PATH=/usr/bin:/usr/sbin /bin/sh
-
-# Set root password
-passwd
-
-# Add a package repo and install packages
-meow repo add main https://your-repo-url
-meow update
-meow install bash coreutils vim
-```
-
 ## meow — Package Manager
+
+"MEOW" is an fast package manager written in python for LFS systems.
+
+The command you can do with meow are down below.
 
 ```
 meow install <pkg...>         install packages
