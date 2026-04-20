@@ -1,30 +1,3 @@
-# PixelOS
-
-A minimal Linux distribution built entirely from source — LFS-style, musl libc, runit init, and **meow**, a lightweight package manager inspired by PiSi/eopkg.
-
-```
-  PixelOS LFS Bootstrap
-  ─────────────────────────────────────────
-  Target root : /mnt/pixelos
-  Triplet     : x86_64-pixelos-linux-musl
-  Jobs        : 16
-```
-
-## Stack
-
-| Component  | Version  | Role                          |
-|------------|----------|-------------------------------|
-| Linux      | 6.8.1    | Kernel + headers              |
-| musl libc  | 1.2.5    | C standard library            |
-| GCC        | 13.2.0   | Cross + native compiler       |
-| binutils   | 2.42     | Assembler, linker             |
-| BusyBox    | 1.36.1   | Static early-boot userland    |
-| Python     | 3.12.3   | Runtime for meow              |
-| bash       | 5.2.21   | Default shell                 |
-| coreutils  | 9.5      | GNU core utilities            |
-| util-linux | 2.40     | System utilities              |
-| runit      | 2.1.2    | Init + service supervision    |
-
 ## Quick Start
 
 > **Requirements:** Linux host (any distro), root access, ~20 GB free on target partition, gcc, make, wget, tar, python3 ≥ 3.11.
