@@ -1,0 +1,11 @@
+[package]
+name        = "kbd"
+version     = "2.6.4"
+release     = 1
+summary     = "Keyboard and console utilities"
+license     = "GPL-2.0"
+source_url  = "https://www.kernel.org/pub/linux/utils/kbd/kbd-2.6.4.tar.xz"
+sha256      = "2f832ac7a82640fbed2b1a4d0b98a6fc9c04fc5eb9afc74b2da21fca32fca6c1"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
