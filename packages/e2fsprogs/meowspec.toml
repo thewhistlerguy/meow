@@ -1,0 +1,11 @@
+[package]
+name        = "e2fsprogs"
+version     = "1.47.1"
+release     = 1
+summary     = "Ext2/3/4 filesystem utilities"
+license     = "GPL-2.0"
+source_url  = "https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.1/e2fsprogs-1.47.1.tar.gz"
+sha256      = "7cc4579fdba6c8e1f2e3c3754d65a8b3bd4282d23048e70f1b2d2f2a2fc39c3e"
+depends       = ["musl", "util-linux"]
+build_depends = ["gcc", "make"]
+provides      = []
