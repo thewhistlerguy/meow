@@ -1,0 +1,11 @@
+[package]
+name        = "libcap"
+version     = "2.70"
+release     = 1
+summary     = "POSIX capabilities library"
+license     = "BSD"
+source_url  = "https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.70.tar.xz"
+sha256      = "bd49677e2e1c1d6a9a09e42898b1dfb37d55aff7b5c7a5deaeae8b7b7b3df0b3"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
