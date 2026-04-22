@@ -1,0 +1,11 @@
+[package]
+name        = "attr"
+version     = "2.5.2"
+release     = 1
+summary     = "Extended attribute utilities"
+license     = "LGPL-2.1"
+source_url  = "https://download.savannah.gnu.org/releases/attr/attr-2.5.2.tar.gz"
+sha256      = "597714c0c7d7fe78b9e09b4e1be9c1e24a6c9c5e6ee4eea65d49af3756e36a27"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
