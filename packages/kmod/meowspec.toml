@@ -1,0 +1,11 @@
+[package]
+name        = "kmod"
+version     = "32"
+release     = 1
+summary     = "Kernel module utilities"
+license     = "GPL-2.0"
+source_url  = "https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-32.tar.xz"
+sha256      = "9e71bd190c76b51c85b25a5a8af88eff27e50ef8f3dc8cf01ead79cc3fef6a34"
+depends       = ["musl", "zlib", "xz", "zstd", "openssl"]
+build_depends = ["gcc", "make"]
+provides      = ["insmod", "rmmod", "lsmod", "modprobe", "modinfo", "depmod"]
