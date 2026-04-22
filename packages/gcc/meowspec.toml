@@ -1,0 +1,11 @@
+[package]
+name        = "gcc"
+version     = "13.2.0"
+release     = 1
+summary     = "GNU Compiler Collection"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz"
+sha256      = "e275e76442a6067341a27f04c5c6b83d8e2a218ff42f0082b0570f91a6b10f75"
+depends       = ["musl", "binutils", "gmp", "mpfr", "mpc", "zlib"]
+build_depends = ["make"]
+provides      = ["cc"]
