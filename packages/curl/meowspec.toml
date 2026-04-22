@@ -1,0 +1,11 @@
+[package]
+name        = "curl"
+version     = "8.7.1"
+release     = 1
+summary     = "Command line tool for transferring data with URLs"
+license     = "MIT"
+source_url  = "https://curl.se/download/curl-8.7.1.tar.xz"
+sha256      = "f91249c87f68ea00cf27c44fdfa5a78423e41e71b7d408e5901a9896d905c495"
+depends       = ["musl", "openssl", "zlib"]
+build_depends = ["gcc", "make"]
+provides      = []
