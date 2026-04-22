@@ -1,0 +1,11 @@
+[package]
+name        = "gawk"
+version     = "5.3.0"
+release     = 1
+summary     = "GNU awk"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/gawk/gawk-5.3.0.tar.xz"
+sha256      = "ca9c16d3d11d0ff8c69d79dc0b47267e1329a69b39b68e0f3e8f01c49f3b6826"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = ["awk"]
