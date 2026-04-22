@@ -1,0 +1,11 @@
+[package]
+name        = "bc"
+version     = "6.7.5"
+release     = 1
+summary     = "Arbitrary precision calculator"
+license     = "BSD-2-Clause"
+source_url  = "https://github.com/gavinhoward/bc/releases/download/6.7.5/bc-6.7.5.tar.xz"
+sha256      = "c3e02c948d51f3ca9cdb23e011070d3b93ff13d7f7abcf2b8d2af1ab58b89b4b"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
