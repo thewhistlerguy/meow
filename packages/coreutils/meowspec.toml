@@ -1,0 +1,11 @@
+[package]
+name        = "coreutils"
+version     = "9.5"
+release     = 1
+summary     = "GNU core utilities"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/coreutils/coreutils-9.5.tar.xz"
+sha256      = "cd328edeac92f6a665de9f323c93b712af1858bc2e8d45422bc5a4e2f0878d85"
+depends       = ["musl", "acl", "attr"]
+build_depends = ["gcc", "make"]
+provides      = []
