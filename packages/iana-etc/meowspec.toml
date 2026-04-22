@@ -1,0 +1,11 @@
+[package]
+name        = "iana-etc"
+version     = "20240408"
+release     = 1
+summary     = "Network services and protocols data"
+license     = "Public Domain"
+source_url  = "https://github.com/Mic92/iana-etc/releases/download/20240408/iana-etc-20240408.tar.gz"
+sha256      = "b7c74e4a43244f35ab0d2f8b2fb65c55b6f6c3e09ba8b0b03bb74d9f82a23450"
+depends       = []
+build_depends = []
+provides      = []
