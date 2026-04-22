@@ -1,0 +1,11 @@
+[package]
+name        = "less"
+version     = "643"
+release     = 1
+summary     = "A terminal pager"
+license     = "BSD"
+source_url  = "https://www.greenwoodsoftware.com/less/less-643.tar.gz"
+sha256      = "9c9f8d04e6f9b8a33a89d14deabb35e7afe3a9bb706498ee40acf5025fc1b03c"
+depends       = ["musl", "ncurses"]
+build_depends = ["gcc", "make"]
+provides      = []
