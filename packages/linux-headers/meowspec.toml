@@ -1,0 +1,11 @@
+[package]
+name        = "linux-headers"
+version     = "6.8.1"
+release     = 1
+summary     = "Linux kernel headers for userspace"
+license     = "GPL-2.0"
+source_url  = "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.8.1.tar.xz"
+sha256      = "fe35ce9b40bc4ef56dc82fd7d3e6f0434379e81e6a6ba18e64fa79a9c29b98d2"
+depends       = []
+build_depends = []
+provides      = []
