@@ -1,0 +1,11 @@
+[package]
+name        = "iproute2"
+version     = "6.9.0"
+release     = 1
+summary     = "IP routing and network utilities"
+license     = "GPL-2.0"
+source_url  = "https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.9.0.tar.xz"
+sha256      = "1a1a5eb8e8b11a8e8ef228dab3e2e64e4cf7c6b6fca3f26d4e73dbec41e8a7c3"
+depends       = ["musl", "libcap", "xtables"]
+build_depends = ["gcc", "make"]
+provides      = []
