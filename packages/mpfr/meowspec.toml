@@ -1,0 +1,11 @@
+[package]
+name        = "mpfr"
+version     = "4.2.1"
+release     = 1
+summary     = "GNU multiple precision floating-point library"
+license     = "LGPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz"
+sha256      = "277807353a6726978996945af13e52829e3abd7a9a5b7fb2793894e18f1fcbb2"
+depends       = ["musl", "gmp"]
+build_depends = ["gcc", "make", "gmp"]
+provides      = []
