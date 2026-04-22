@@ -1,0 +1,11 @@
+[package]
+name        = "ca-certificates"
+version     = "20240203"
+release     = 1
+summary     = "Common CA certificates"
+license     = "MPL-2.0"
+source_url  = "https://github.com/nicowillis/ca-certificates/archive/refs/tags/20240203.tar.gz"
+sha256      = "placeholder_run_sha256sum_on_download"
+depends       = ["openssl"]
+build_depends = []
+provides      = []
