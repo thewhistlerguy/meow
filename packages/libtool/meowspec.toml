@@ -1,0 +1,11 @@
+[package]
+name        = "libtool"
+version     = "2.4.7"
+release     = 1
+summary     = "Generic library support script"
+license     = "GPL-2.0"
+source_url  = "https://ftp.gnu.org/gnu/libtool/libtool-2.4.7.tar.xz"
+sha256      = "4f7f217f057ce655ff22559ad221a0fd8ef84ad1fc5fcb6990cecc333aa1635d"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
