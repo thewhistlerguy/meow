@@ -1,0 +1,22 @@
+#!/bin/bash
+# build.sh — called by meow build
+set -euo pipefail
+
+./configure \
+    --prefix=/usr \
+    --sysconfdir=/etc/ssh \
+    --with-ssl-dir=/usr \
+    --with-privsep-path=/var/lib/sshd \
+    --with-default-path=/usr/bin \
+    --with-superuser-path=/usr/sbin:/usr/bin \
+    --with-pid-dir=/run
+
+make -j$(nproc)
+
+make DESTDIR="$MEOW_STAGE" install
+install -d "$MEOW_STAGE/var/lib/sshd"
+chmod 700 "$MEOW_STAGE/var/lib/sshd"
+
+# Strip binaries
+strip --strip-unneeded "$MEOW_STAGE/usr/bin/ssh" 2>/dev/null || true
+strip --strip-unneeded "$MEOW_STAGE/usr/sbin/sshd" 2>/dev/null || true
