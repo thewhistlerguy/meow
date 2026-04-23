@@ -1,0 +1,11 @@
+[package]
+name        = "texinfo"
+version     = "7.1"
+release     = 1
+summary     = "GNU documentation system"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/texinfo/texinfo-7.1.tar.xz"
+sha256      = "deeec9f19f159e046fdf73f206c5aa9507e3b7c1f7086c4ded6b9a45ce5d4cf5"
+depends       = ["musl"]
+build_depends = ["gcc", "make", "perl"]
+provides      = []
