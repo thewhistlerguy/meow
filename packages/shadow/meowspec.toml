@@ -1,0 +1,11 @@
+[package]
+name        = "shadow"
+version     = "4.15.1"
+release     = 1
+summary     = "Password and account management utilities"
+license     = "BSD"
+source_url  = "https://github.com/shadow-maint/shadow/releases/download/4.15.1/shadow-4.15.1.tar.xz"
+sha256      = "2a9a5bc67e9fa17b7df5c9620c4db5e6f6e0b42e7c1b7b4a1d7a98e1b7c2b3c4"
+depends       = ["musl", "acl", "attr"]
+build_depends = ["gcc", "make"]
+provides      = []
