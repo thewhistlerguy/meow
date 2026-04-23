@@ -766,7 +766,7 @@
       ],
       "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/ca-certificates-20240203-1-x86_64.meow",
       "filename": "ca-certificates-20240203-1-x86_64.meow",
-      "sha256": "placeholder_run_sha256sum_on_download"
+      "sha256": "pending"
     },
     "curl": {
       "name": "curl",
@@ -857,7 +857,7 @@
       ],
       "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/vim-9.1.0-1-x86_64.meow",
       "filename": "vim-9.1.0-1-x86_64.meow",
-      "sha256": "placeholder_run_sha256sum_on_download"
+      "sha256": "pending"
     },
     "nano": {
       "name": "nano",
@@ -872,7 +872,825 @@
       ],
       "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/nano-8.0-1-x86_64.meow",
       "filename": "nano-8.0-1-x86_64.meow",
-      "sha256": "placeholder_run_sha256sum_on_download"
+      "sha256": "pending"
+    },
+    "which": {
+      "name": "which",
+      "version": "2.21",
+      "release": 1,
+      "summary": "Locate commands in PATH",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/which-2.21-1-x86_64.meow",
+      "filename": "which-2.21-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "tree": {
+      "name": "tree",
+      "version": "2.1.1",
+      "release": 1,
+      "summary": "Recursive directory listing utility",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/tree-2.1.1-1-x86_64.meow",
+      "filename": "tree-2.1.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "htop": {
+      "name": "htop",
+      "version": "3.3.0",
+      "release": 1,
+      "summary": "Interactive process viewer",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/htop-3.3.0-1-x86_64.meow",
+      "filename": "htop-3.3.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "sudo": {
+      "name": "sudo",
+      "version": "1.9.15p5",
+      "release": 1,
+      "summary": "Execute commands as another user",
+      "license": "ISC",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "shadow"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/sudo-1.9.15p5-1-x86_64.meow",
+      "filename": "sudo-1.9.15p5-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "man-db": {
+      "name": "man-db",
+      "version": "2.12.1",
+      "release": 1,
+      "summary": "Manual page viewer and database",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "groff",
+        "less",
+        "libpipeline"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/man-db-2.12.1-1-x86_64.meow",
+      "filename": "man-db-2.12.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "man-pages": {
+      "name": "man-pages",
+      "version": "6.7",
+      "release": 1,
+      "summary": "Linux manual pages",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/man-pages-6.7-1-x86_64.meow",
+      "filename": "man-pages-6.7-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "groff": {
+      "name": "groff",
+      "version": "1.23.0",
+      "release": 1,
+      "summary": "GNU document formatting system",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/groff-1.23.0-1-x86_64.meow",
+      "filename": "groff-1.23.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libpipeline": {
+      "name": "libpipeline",
+      "version": "1.5.7",
+      "release": 1,
+      "summary": "C library for manipulating pipelines of subprocesses",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libpipeline-1.5.7-1-x86_64.meow",
+      "filename": "libpipeline-1.5.7-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "tzdata": {
+      "name": "tzdata",
+      "version": "2024a",
+      "release": 1,
+      "summary": "Timezone data",
+      "license": "Public Domain",
+      "arch": "x86_64",
+      "depends": [],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/tzdata-2024a-1-x86_64.meow",
+      "filename": "tzdata-2024a-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "dosfstools": {
+      "name": "dosfstools",
+      "version": "4.2",
+      "release": 1,
+      "summary": "Tools for creating and checking MS-DOS FAT filesystems",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/dosfstools-4.2-1-x86_64.meow",
+      "filename": "dosfstools-4.2-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "btrfs-progs": {
+      "name": "btrfs-progs",
+      "version": "6.8.1",
+      "release": 1,
+      "summary": "Btrfs filesystem utilities",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "util-linux",
+        "zlib",
+        "zstd",
+        "lz4"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/btrfs-progs-6.8.1-1-x86_64.meow",
+      "filename": "btrfs-progs-6.8.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "grub": {
+      "name": "grub",
+      "version": "2.12",
+      "release": 1,
+      "summary": "GNU GRand Unified Bootloader",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/grub-2.12-1-x86_64.meow",
+      "filename": "grub-2.12-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "lz4": {
+      "name": "lz4",
+      "version": "1.9.4",
+      "release": 1,
+      "summary": "Fast LZ compression algorithm",
+      "license": "BSD-2-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/lz4-1.9.4-1-x86_64.meow",
+      "filename": "lz4-1.9.4-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "zip": {
+      "name": "zip",
+      "version": "3.0",
+      "release": 1,
+      "summary": "Create and modify zip archives",
+      "license": "Info-ZIP",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/zip-3.0-1-x86_64.meow",
+      "filename": "zip-3.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "unzip": {
+      "name": "unzip",
+      "version": "6.0",
+      "release": 1,
+      "summary": "Extract and examine zip archives",
+      "license": "Info-ZIP",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/unzip-6.0-1-x86_64.meow",
+      "filename": "unzip-6.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libxml2": {
+      "name": "libxml2",
+      "version": "2.12.6",
+      "release": 1,
+      "summary": "XML parsing library",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "zlib",
+        "xz"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libxml2-2.12.6-1-x86_64.meow",
+      "filename": "libxml2-2.12.6-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libxslt": {
+      "name": "libxslt",
+      "version": "1.1.39",
+      "release": 1,
+      "summary": "XSLT processing library",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "libxml2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libxslt-1.1.39-1-x86_64.meow",
+      "filename": "libxslt-1.1.39-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "pcre2": {
+      "name": "pcre2",
+      "version": "10.43",
+      "release": 1,
+      "summary": "Perl-compatible regular expressions library v2",
+      "license": "BSD-3-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "zlib",
+        "bzip2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/pcre2-10.43-1-x86_64.meow",
+      "filename": "pcre2-10.43-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libunistring": {
+      "name": "libunistring",
+      "version": "1.2",
+      "release": 1,
+      "summary": "GNU Unicode string library",
+      "license": "LGPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libunistring-1.2-1-x86_64.meow",
+      "filename": "libunistring-1.2-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libidn2": {
+      "name": "libidn2",
+      "version": "2.3.7",
+      "release": 1,
+      "summary": "GNU internationalized domain names library",
+      "license": "LGPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "libunistring"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libidn2-2.3.7-1-x86_64.meow",
+      "filename": "libidn2-2.3.7-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "nghttp2": {
+      "name": "nghttp2",
+      "version": "1.61.0",
+      "release": 1,
+      "summary": "HTTP/2 C library",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl",
+        "zlib",
+        "libxml2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/nghttp2-1.61.0-1-x86_64.meow",
+      "filename": "nghttp2-1.61.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "dbus": {
+      "name": "dbus",
+      "version": "1.14.10",
+      "release": 1,
+      "summary": "D-Bus message bus system",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "expat"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/dbus-1.14.10-1-x86_64.meow",
+      "filename": "dbus-1.14.10-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "glib2": {
+      "name": "glib2",
+      "version": "2.80.0",
+      "release": 1,
+      "summary": "Low-level core library for GNOME",
+      "license": "LGPL-2.1",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "pcre2",
+        "libffi",
+        "zlib"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/glib2-2.80.0-1-x86_64.meow",
+      "filename": "glib2-2.80.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "cmake": {
+      "name": "cmake",
+      "version": "3.29.3",
+      "release": 1,
+      "summary": "Cross-platform build system generator",
+      "license": "BSD-3-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl",
+        "zlib",
+        "libxml2",
+        "curl",
+        "zstd"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/cmake-3.29.3-1-x86_64.meow",
+      "filename": "cmake-3.29.3-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "ninja": {
+      "name": "ninja",
+      "version": "1.12.1",
+      "release": 1,
+      "summary": "Small and fast build system",
+      "license": "Apache-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/ninja-1.12.1-1-x86_64.meow",
+      "filename": "ninja-1.12.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "meson": {
+      "name": "meson",
+      "version": "1.4.1",
+      "release": 1,
+      "summary": "Fast and user-friendly build system",
+      "license": "Apache-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "python",
+        "ninja"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/meson-1.4.1-1-x86_64.meow",
+      "filename": "meson-1.4.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "strace": {
+      "name": "strace",
+      "version": "6.9",
+      "release": 1,
+      "summary": "System call tracer",
+      "license": "LGPL-2.1",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/strace-6.9-1-x86_64.meow",
+      "filename": "strace-6.9-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "gdb": {
+      "name": "gdb",
+      "version": "14.2",
+      "release": 1,
+      "summary": "GNU Debugger",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "readline",
+        "ncurses",
+        "python",
+        "expat",
+        "xz",
+        "mpfr"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/gdb-14.2-1-x86_64.meow",
+      "filename": "gdb-14.2-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "valgrind": {
+      "name": "valgrind",
+      "version": "3.23.0",
+      "release": 1,
+      "summary": "Memory debugging and profiling tools",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/valgrind-3.23.0-1-x86_64.meow",
+      "filename": "valgrind-3.23.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "dhcpcd": {
+      "name": "dhcpcd",
+      "version": "10.0.8",
+      "release": 1,
+      "summary": "DHCP client daemon",
+      "license": "BSD-2-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/dhcpcd-10.0.8-1-x86_64.meow",
+      "filename": "dhcpcd-10.0.8-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "wpa_supplicant": {
+      "name": "wpa_supplicant",
+      "version": "2.11",
+      "release": 1,
+      "summary": "WPA/WPA2/IEEE 802.1X supplicant",
+      "license": "BSD",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/wpa_supplicant-2.11-1-x86_64.meow",
+      "filename": "wpa_supplicant-2.11-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "nftables": {
+      "name": "nftables",
+      "version": "1.1.0",
+      "release": 1,
+      "summary": "Netfilter tables userspace tools",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "gmp",
+        "libmnl",
+        "libnftnl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/nftables-1.1.0-1-x86_64.meow",
+      "filename": "nftables-1.1.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libmnl": {
+      "name": "libmnl",
+      "version": "1.0.5",
+      "release": 1,
+      "summary": "Minimalistic netlink library",
+      "license": "LGPL-2.1",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libmnl-1.0.5-1-x86_64.meow",
+      "filename": "libmnl-1.0.5-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libnftnl": {
+      "name": "libnftnl",
+      "version": "1.2.6",
+      "release": 1,
+      "summary": "Library for low-level interaction with nftables",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "libmnl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libnftnl-1.2.6-1-x86_64.meow",
+      "filename": "libnftnl-1.2.6-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "rsync": {
+      "name": "rsync",
+      "version": "3.3.0",
+      "release": 1,
+      "summary": "Fast, versatile file copying tool",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl",
+        "zlib",
+        "popt",
+        "xxhash"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/rsync-3.3.0-1-x86_64.meow",
+      "filename": "rsync-3.3.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "tcpdump": {
+      "name": "tcpdump",
+      "version": "4.99.4",
+      "release": 1,
+      "summary": "Network traffic analyzer",
+      "license": "BSD-3-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "libpcap",
+        "openssl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/tcpdump-4.99.4-1-x86_64.meow",
+      "filename": "tcpdump-4.99.4-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libpcap": {
+      "name": "libpcap",
+      "version": "1.10.4",
+      "release": 1,
+      "summary": "Packet capture library",
+      "license": "BSD-3-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libpcap-1.10.4-1-x86_64.meow",
+      "filename": "libpcap-1.10.4-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "nmap": {
+      "name": "nmap",
+      "version": "7.94",
+      "release": 1,
+      "summary": "Network exploration and security auditing tool",
+      "license": "NPSL",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl",
+        "zlib",
+        "libpcap",
+        "pcre2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/nmap-7.94-1-x86_64.meow",
+      "filename": "nmap-7.94-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "tmux": {
+      "name": "tmux",
+      "version": "3.4",
+      "release": 1,
+      "summary": "Terminal multiplexer",
+      "license": "ISC",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses",
+        "libevent"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/tmux-3.4-1-x86_64.meow",
+      "filename": "tmux-3.4-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libevent": {
+      "name": "libevent",
+      "version": "2.1.12",
+      "release": 1,
+      "summary": "Event notification library",
+      "license": "BSD-3-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libevent-2.1.12-1-x86_64.meow",
+      "filename": "libevent-2.1.12-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "screen": {
+      "name": "screen",
+      "version": "4.9.1",
+      "release": 1,
+      "summary": "Screen manager with VT100/ANSI terminal emulation",
+      "license": "GPL-3.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/screen-4.9.1-1-x86_64.meow",
+      "filename": "screen-4.9.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "ncdu": {
+      "name": "ncdu",
+      "version": "1.19",
+      "release": 1,
+      "summary": "NCurses disk usage analyzer",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/ncdu-1.19-1-x86_64.meow",
+      "filename": "ncdu-1.19-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "jq": {
+      "name": "jq",
+      "version": "1.7.1",
+      "release": 1,
+      "summary": "Lightweight JSON processor",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/jq-1.7.1-1-x86_64.meow",
+      "filename": "jq-1.7.1-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "pciutils": {
+      "name": "pciutils",
+      "version": "3.12.0",
+      "release": 1,
+      "summary": "Programs for inspecting and manipulating PCI devices",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "zlib"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/pciutils-3.12.0-1-x86_64.meow",
+      "filename": "pciutils-3.12.0-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "usbutils": {
+      "name": "usbutils",
+      "version": "017",
+      "release": 1,
+      "summary": "USB utilities (lsusb)",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "libusb"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/usbutils-017-1-x86_64.meow",
+      "filename": "usbutils-017-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "libusb": {
+      "name": "libusb",
+      "version": "1.0.27",
+      "release": 1,
+      "summary": "C library for USB device access",
+      "license": "LGPL-2.1",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/libusb-1.0.27-1-x86_64.meow",
+      "filename": "libusb-1.0.27-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "lsof": {
+      "name": "lsof",
+      "version": "4.99.3",
+      "release": 1,
+      "summary": "List open files",
+      "license": "BSD",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/lsof-4.99.3-1-x86_64.meow",
+      "filename": "lsof-4.99.3-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "zsh": {
+      "name": "zsh",
+      "version": "5.9",
+      "release": 1,
+      "summary": "Highly interactive and customizable shell",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "ncurses",
+        "readline",
+        "pcre2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/zsh-5.9-1-x86_64.meow",
+      "filename": "zsh-5.9-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "lua": {
+      "name": "lua",
+      "version": "5.4.7",
+      "release": 1,
+      "summary": "Lightweight embeddable scripting language",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/lua-5.4.7-1-x86_64.meow",
+      "filename": "lua-5.4.7-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "tcl": {
+      "name": "tcl",
+      "version": "8.6.14",
+      "release": 1,
+      "summary": "Tool Command Language scripting language",
+      "license": "TCL",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "zlib"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/tcl-8.6.14-1-x86_64.meow",
+      "filename": "tcl-8.6.14-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "sysstat": {
+      "name": "sysstat",
+      "version": "12.7.6",
+      "release": 1,
+      "summary": "Performance monitoring tools (sar, iostat, mpstat)",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/sysstat-12.7.6-1-x86_64.meow",
+      "filename": "sysstat-12.7.6-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "git": {
+      "name": "git",
+      "version": "2.45.2",
+      "release": 1,
+      "summary": "Fast, scalable, distributed revision control system",
+      "license": "GPL-2.0",
+      "arch": "x86_64",
+      "depends": [
+        "musl",
+        "openssl",
+        "zlib",
+        "curl",
+        "expat",
+        "pcre2"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/git-2.45.2-1-x86_64.meow",
+      "filename": "git-2.45.2-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "popt": {
+      "name": "popt",
+      "version": "1.19",
+      "release": 1,
+      "summary": "C library for parsing command line parameters",
+      "license": "MIT",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/popt-1.19-1-x86_64.meow",
+      "filename": "popt-1.19-1-x86_64.meow",
+      "sha256": "pending"
+    },
+    "xxhash": {
+      "name": "xxhash",
+      "version": "0.8.2",
+      "release": 1,
+      "summary": "Extremely fast non-cryptographic hash algorithm",
+      "license": "BSD-2-Clause",
+      "arch": "x86_64",
+      "depends": [
+        "musl"
+      ],
+      "url": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/dist/xxhash-0.8.2-1-x86_64.meow",
+      "filename": "xxhash-0.8.2-1-x86_64.meow",
+      "sha256": "pending"
     }
   }
 }
