@@ -1,6 +1,6 @@
 ## meow — Package Manager
 
-"MEOW" is an fast package manager written in python for LFS systems.
+"MEOW" is an fast package manager written in python for rockhopper, an LFS like system.
 
 The commands you can do with meow are down below.
 
