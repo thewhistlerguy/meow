@@ -1,0 +1,11 @@
+[package]
+name        = "runit"
+version     = "2.1.2"
+release     = 1
+summary     = "UNIX init scheme with service supervision"
+license     = "BSD"
+source_url  = "http://smarden.org/runit/runit-2.1.2.tar.gz"
+sha256      = "6fd0163894f16f4f027c5cfc2f91f65e785e37c1c30e7babd2c0d6f8f7c80a0e"
+depends       = ["musl"]
+build_depends = ["gcc"]
+provides      = []
