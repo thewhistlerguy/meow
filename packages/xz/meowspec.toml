@@ -1,0 +1,11 @@
+[package]
+name        = "xz"
+version     = "5.6.1"
+release     = 1
+summary     = "XZ-format compression utilities"
+license     = "GPL-3.0"
+source_url  = "https://github.com/tukaani-project/xz/releases/download/v5.6.1/xz-5.6.1.tar.xz"
+sha256      = "a1e44b90e6f8c24bc0028b5c90f2ef0ac8abf14cd67adf07e80f8a7e1c82975d"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
