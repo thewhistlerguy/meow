@@ -1,0 +1,22 @@
+# meowspec.toml — lua
+[package]
+name        = "lua"
+version     = "5.4.7"
+release     = 1
+summary     = "Lightweight embeddable scripting language"
+description = "Lightweight embeddable scripting language"
+license     = "MIT"
+homepage    = "https://www.lua.org/"
+arch        = "x86_64"
+source_url  = "https://www.lua.org/ftp/lua-5.4.7.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.lua.org/ftp/lua-5.4.7.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

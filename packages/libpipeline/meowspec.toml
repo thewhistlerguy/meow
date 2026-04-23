@@ -1,0 +1,22 @@
+# meowspec.toml — libpipeline
+[package]
+name        = "libpipeline"
+version     = "1.5.7"
+release     = 1
+summary     = "C library for manipulating pipelines of subprocesses"
+description = "C library for manipulating pipelines of subprocesses"
+license     = "GPL-3.0"
+homepage    = "http://libpipeline.nongnu.org/"
+arch        = "x86_64"
+source_url  = "https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.7.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.7.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

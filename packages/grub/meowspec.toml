@@ -1,0 +1,27 @@
+# meowspec.toml — grub
+[package]
+name        = "grub"
+version     = "2.12"
+release     = 1
+summary     = "GNU GRand Unified Bootloader"
+description = "GNU GRand Unified Bootloader"
+license     = "GPL-3.0"
+homepage    = "https://www.gnu.org/software/grub/"
+arch        = "x86_64"
+source_url  = "https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz)
+
+depends = [
+  "musl",
+  "ncurses",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "bison",
+  "flex",
+  "python",
+  "texinfo",
+]
+provides  = []
+conflicts = []

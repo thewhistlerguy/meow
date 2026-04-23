@@ -1,0 +1,21 @@
+# meowspec.toml — man-pages
+[package]
+name        = "man-pages"
+version     = "6.7"
+release     = 1
+summary     = "Linux manual pages"
+description = "Linux manual pages"
+license     = "GPL-2.0"
+homepage    = "https://www.kernel.org/doc/man-pages/"
+arch        = "x86_64"
+source_url  = "https://mirrors.edge.kernel.org/pub/linux/docs/man-pages/man-pages-6.7.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://mirrors.edge.kernel.org/pub/linux/docs/man-pages/man-pages-6.7.tar.xz)
+
+depends = [
+
+]
+build_depends = [
+  "make",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,23 @@
+# meowspec.toml — ninja
+[package]
+name        = "ninja"
+version     = "1.12.1"
+release     = 1
+summary     = "Small and fast build system"
+description = "Small and fast build system"
+license     = "Apache-2.0"
+homepage    = "https://ninja-build.org/"
+arch        = "x86_64"
+source_url  = "https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "python",
+  "cmake",
+]
+provides  = []
+conflicts = []

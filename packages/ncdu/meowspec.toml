@@ -1,0 +1,23 @@
+# meowspec.toml — ncdu
+[package]
+name        = "ncdu"
+version     = "1.19"
+release     = 1
+summary     = "NCurses disk usage analyzer"
+description = "NCurses disk usage analyzer"
+license     = "MIT"
+homepage    = "https://dev.yorhel.nl/ncdu"
+arch        = "x86_64"
+source_url  = "https://dev.yorhel.nl/download/ncdu-1.19.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://dev.yorhel.nl/download/ncdu-1.19.tar.gz)
+
+depends = [
+  "musl",
+  "ncurses",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

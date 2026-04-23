@@ -1,0 +1,22 @@
+# meowspec.toml — lsof
+[package]
+name        = "lsof"
+version     = "4.99.3"
+release     = 1
+summary     = "List open files"
+description = "List open files"
+license     = "BSD"
+homepage    = "https://github.com/lsof-org/lsof"
+arch        = "x86_64"
+source_url  = "https://github.com/lsof-org/lsof/releases/download/4.99.3/lsof-4.99.3.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/lsof-org/lsof/releases/download/4.99.3/lsof-4.99.3.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

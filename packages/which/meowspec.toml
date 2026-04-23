@@ -1,0 +1,22 @@
+# meowspec.toml — which
+[package]
+name        = "which"
+version     = "2.21"
+release     = 1
+summary     = "Locate commands in PATH"
+description = "Locate commands in PATH"
+license     = "GPL-3.0"
+homepage    = "https://savannah.gnu.org/projects/which/"
+arch        = "x86_64"
+source_url  = "https://ftp.gnu.org/gnu/which/which-2.21.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://ftp.gnu.org/gnu/which/which-2.21.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

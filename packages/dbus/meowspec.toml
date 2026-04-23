@@ -1,0 +1,24 @@
+# meowspec.toml — dbus
+[package]
+name        = "dbus"
+version     = "1.14.10"
+release     = 1
+summary     = "D-Bus message bus system"
+description = "D-Bus message bus system"
+license     = "GPL-2.0"
+homepage    = "https://www.freedesktop.org/wiki/Software/dbus/"
+arch        = "x86_64"
+source_url  = "https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://dbus.freedesktop.org/releases/dbus/dbus-1.14.10.tar.xz)
+
+depends = [
+  "musl",
+  "expat",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "expat-dev",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,22 @@
+# meowspec.toml — dosfstools
+[package]
+name        = "dosfstools"
+version     = "4.2"
+release     = 1
+summary     = "Tools for creating and checking MS-DOS FAT filesystems"
+description = "Tools for creating and checking MS-DOS FAT filesystems"
+license     = "GPL-3.0"
+homepage    = "https://github.com/dosfstools/dosfstools"
+arch        = "x86_64"
+source_url  = "https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/dosfstools/dosfstools/releases/download/v4.2/dosfstools-4.2.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,22 @@
+# meowspec.toml — valgrind
+[package]
+name        = "valgrind"
+version     = "3.23.0"
+release     = 1
+summary     = "Memory debugging and profiling tools"
+description = "Memory debugging and profiling tools"
+license     = "GPL-2.0"
+homepage    = "https://valgrind.org/"
+arch        = "x86_64"
+source_url  = "https://sourceware.org/pub/valgrind/valgrind-3.23.0.tar.bz2"
+sha256      = ""  # fill in after: sha256sum $(basename https://sourceware.org/pub/valgrind/valgrind-3.23.0.tar.bz2)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

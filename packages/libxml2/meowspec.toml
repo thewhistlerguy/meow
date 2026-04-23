@@ -1,0 +1,25 @@
+# meowspec.toml — libxml2
+[package]
+name        = "libxml2"
+version     = "2.12.6"
+release     = 1
+summary     = "XML parsing library"
+description = "XML parsing library"
+license     = "MIT"
+homepage    = "https://gitlab.gnome.org/GNOME/libxml2"
+arch        = "x86_64"
+source_url  = "https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.6.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://download.gnome.org/sources/libxml2/2.12/libxml2-2.12.6.tar.xz)
+
+depends = [
+  "musl",
+  "zlib",
+  "xz",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "python",
+]
+provides  = []
+conflicts = []

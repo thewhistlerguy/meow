@@ -1,0 +1,24 @@
+# meowspec.toml — libxslt
+[package]
+name        = "libxslt"
+version     = "1.1.39"
+release     = 1
+summary     = "XSLT processing library"
+description = "XSLT processing library"
+license     = "MIT"
+homepage    = "https://gitlab.gnome.org/GNOME/libxslt"
+arch        = "x86_64"
+source_url  = "https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.39.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.39.tar.xz)
+
+depends = [
+  "musl",
+  "libxml2",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "libxml2-dev",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,22 @@
+# meowspec.toml — sysstat
+[package]
+name        = "sysstat"
+version     = "12.7.6"
+release     = 1
+summary     = "Performance monitoring tools (sar, iostat, mpstat)"
+description = "Performance monitoring tools (sar, iostat, mpstat)"
+license     = "GPL-2.0"
+homepage    = "https://github.com/sysstat/sysstat"
+arch        = "x86_64"
+source_url  = "http://sebastien.godard.pagesperso-orange.fr/sysstat-12.7.6.tar.bz2"
+sha256      = ""  # fill in after: sha256sum $(basename http://sebastien.godard.pagesperso-orange.fr/sysstat-12.7.6.tar.bz2)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,24 @@
+# meowspec.toml — libnftnl
+[package]
+name        = "libnftnl"
+version     = "1.2.6"
+release     = 1
+summary     = "Library for low-level interaction with nftables"
+description = "Library for low-level interaction with nftables"
+license     = "GPL-2.0"
+homepage    = "https://www.netfilter.org/projects/libnftnl/"
+arch        = "x86_64"
+source_url  = "https://www.netfilter.org/projects/libnftnl/files/libnftnl-1.2.6.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.netfilter.org/projects/libnftnl/files/libnftnl-1.2.6.tar.xz)
+
+depends = [
+  "musl",
+  "libmnl",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "libmnl-dev",
+]
+provides  = []
+conflicts = []

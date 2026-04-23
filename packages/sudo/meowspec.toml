@@ -1,0 +1,23 @@
+# meowspec.toml — sudo
+[package]
+name        = "sudo"
+version     = "1.9.15p5"
+release     = 1
+summary     = "Execute commands as another user"
+description = "Execute commands as another user"
+license     = "ISC"
+homepage    = "https://www.sudo.ws/"
+arch        = "x86_64"
+source_url  = "https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz)
+
+depends = [
+  "musl",
+  "shadow",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

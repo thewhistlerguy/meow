@@ -1,0 +1,22 @@
+# meowspec.toml — jq
+[package]
+name        = "jq"
+version     = "1.7.1"
+release     = 1
+summary     = "Lightweight JSON processor"
+description = "Lightweight JSON processor"
+license     = "MIT"
+homepage    = "https://jqlang.github.io/jq/"
+arch        = "x86_64"
+source_url  = "https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-1.7.1.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-1.7.1.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

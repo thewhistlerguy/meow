@@ -1,0 +1,26 @@
+# meowspec.toml — man-db
+[package]
+name        = "man-db"
+version     = "2.12.1"
+release     = 1
+summary     = "Manual page viewer and database"
+description = "Manual page viewer and database"
+license     = "GPL-2.0"
+homepage    = "https://www.nongnu.org/man-db/"
+arch        = "x86_64"
+source_url  = "https://download.savannah.gnu.org/releases/man-db/man-db-2.12.1.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://download.savannah.gnu.org/releases/man-db/man-db-2.12.1.tar.xz)
+
+depends = [
+  "musl",
+  "groff",
+  "less",
+  "libpipeline",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "libpipeline-dev",
+]
+provides  = ["man"]
+conflicts = []

@@ -1,0 +1,28 @@
+# meowspec.toml — glib2
+[package]
+name        = "glib2"
+version     = "2.80.0"
+release     = 1
+summary     = "Low-level core library for GNOME"
+description = "Low-level core library for GNOME"
+license     = "LGPL-2.1"
+homepage    = "https://gitlab.gnome.org/GNOME/glib"
+arch        = "x86_64"
+source_url  = "https://download.gnome.org/sources/glib/2.80/glib-2.80.0.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://download.gnome.org/sources/glib/2.80/glib-2.80.0.tar.xz)
+
+depends = [
+  "musl",
+  "pcre2",
+  "libffi",
+  "zlib",
+]
+build_depends = [
+  "gcc",
+  "meson",
+  "ninja",
+  "python",
+  "pkgconf",
+]
+provides  = []
+conflicts = []

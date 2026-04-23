@@ -1,0 +1,21 @@
+# meowspec.toml — tzdata
+[package]
+name        = "tzdata"
+version     = "2024a"
+release     = 1
+summary     = "Timezone data"
+description = "Timezone data"
+license     = "Public Domain"
+homepage    = "https://www.iana.org/time-zones"
+arch        = "x86_64"
+source_url  = "https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://data.iana.org/time-zones/releases/tzdata2024a.tar.gz)
+
+depends = [
+
+]
+build_depends = [
+  "make",
+]
+provides  = []
+conflicts = []

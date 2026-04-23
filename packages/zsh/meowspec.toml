@@ -1,0 +1,26 @@
+# meowspec.toml — zsh
+[package]
+name        = "zsh"
+version     = "5.9"
+release     = 1
+summary     = "Highly interactive and customizable shell"
+description = "Highly interactive and customizable shell"
+license     = "MIT"
+homepage    = "https://www.zsh.org/"
+arch        = "x86_64"
+source_url  = "https://www.zsh.org/pub/zsh-5.9.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.zsh.org/pub/zsh-5.9.tar.xz)
+
+depends = [
+  "musl",
+  "ncurses",
+  "readline",
+  "pcre2",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "texinfo",
+]
+provides  = ["sh"]
+conflicts = []

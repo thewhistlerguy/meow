@@ -1,0 +1,22 @@
+# meowspec.toml — strace
+[package]
+name        = "strace"
+version     = "6.9"
+release     = 1
+summary     = "System call tracer"
+description = "System call tracer"
+license     = "LGPL-2.1"
+homepage    = "https://strace.io/"
+arch        = "x86_64"
+source_url  = "https://github.com/strace/strace/releases/download/v6.9/strace-6.9.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/strace/strace/releases/download/v6.9/strace-6.9.tar.xz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

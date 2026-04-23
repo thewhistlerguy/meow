@@ -1,0 +1,23 @@
+# meowspec.toml — tcl
+[package]
+name        = "tcl"
+version     = "8.6.14"
+release     = 1
+summary     = "Tool Command Language scripting language"
+description = "Tool Command Language scripting language"
+license     = "TCL"
+homepage    = "https://www.tcl.tk/"
+arch        = "x86_64"
+source_url  = "https://downloads.sourceforge.net/tcl/tcl8.6.14-src.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://downloads.sourceforge.net/tcl/tcl8.6.14-src.tar.gz)
+
+depends = [
+  "musl",
+  "zlib",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

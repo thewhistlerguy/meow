@@ -1,0 +1,26 @@
+# meowspec.toml — rsync
+[package]
+name        = "rsync"
+version     = "3.3.0"
+release     = 1
+summary     = "Fast, versatile file copying tool"
+description = "Fast, versatile file copying tool"
+license     = "GPL-3.0"
+homepage    = "https://rsync.samba.org/"
+arch        = "x86_64"
+source_url  = "https://www.samba.org/ftp/rsync/src/rsync-3.3.0.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.samba.org/ftp/rsync/src/rsync-3.3.0.tar.gz)
+
+depends = [
+  "musl",
+  "openssl",
+  "zlib",
+  "popt",
+  "xxhash",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

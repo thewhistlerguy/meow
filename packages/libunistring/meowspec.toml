@@ -1,0 +1,22 @@
+# meowspec.toml — libunistring
+[package]
+name        = "libunistring"
+version     = "1.2"
+release     = 1
+summary     = "GNU Unicode string library"
+description = "GNU Unicode string library"
+license     = "LGPL-3.0"
+homepage    = "https://www.gnu.org/software/libunistring/"
+arch        = "x86_64"
+source_url  = "https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://ftp.gnu.org/gnu/libunistring/libunistring-1.2.tar.xz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

@@ -1,0 +1,26 @@
+# meowspec.toml — nghttp2
+[package]
+name        = "nghttp2"
+version     = "1.61.0"
+release     = 1
+summary     = "HTTP/2 C library"
+description = "HTTP/2 C library"
+license     = "MIT"
+homepage    = "https://nghttp2.org/"
+arch        = "x86_64"
+source_url  = "https://github.com/nghttp2/nghttp2/releases/download/v1.61.0/nghttp2-1.61.0.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/nghttp2/nghttp2/releases/download/v1.61.0/nghttp2-1.61.0.tar.xz)
+
+depends = [
+  "musl",
+  "openssl",
+  "zlib",
+  "libxml2",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "cmake",
+]
+provides  = []
+conflicts = []

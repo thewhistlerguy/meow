@@ -1,0 +1,29 @@
+# meowspec.toml — gdb
+[package]
+name        = "gdb"
+version     = "14.2"
+release     = 1
+summary     = "GNU Debugger"
+description = "GNU Debugger"
+license     = "GPL-3.0"
+homepage    = "https://www.gnu.org/software/gdb/"
+arch        = "x86_64"
+source_url  = "https://ftp.gnu.org/gnu/gdb/gdb-14.2.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://ftp.gnu.org/gnu/gdb/gdb-14.2.tar.xz)
+
+depends = [
+  "musl",
+  "readline",
+  "ncurses",
+  "python",
+  "expat",
+  "xz",
+  "mpfr",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "texinfo",
+]
+provides  = []
+conflicts = []

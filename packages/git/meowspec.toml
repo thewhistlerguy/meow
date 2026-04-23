@@ -1,0 +1,28 @@
+# meowspec.toml — git
+[package]
+name        = "git"
+version     = "2.45.2"
+release     = 1
+summary     = "Fast, scalable, distributed revision control system"
+description = "Fast, scalable, distributed revision control system"
+license     = "GPL-2.0"
+homepage    = "https://git-scm.com/"
+arch        = "x86_64"
+source_url  = "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.2.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.45.2.tar.xz)
+
+depends = [
+  "musl",
+  "openssl",
+  "zlib",
+  "curl",
+  "expat",
+  "pcre2",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "perl",
+]
+provides  = []
+conflicts = []

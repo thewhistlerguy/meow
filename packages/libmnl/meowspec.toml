@@ -1,0 +1,22 @@
+# meowspec.toml — libmnl
+[package]
+name        = "libmnl"
+version     = "1.0.5"
+release     = 1
+summary     = "Minimalistic netlink library"
+description = "Minimalistic netlink library"
+license     = "LGPL-2.1"
+homepage    = "https://www.netfilter.org/projects/libmnl/"
+arch        = "x86_64"
+source_url  = "https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2"
+sha256      = ""  # fill in after: sha256sum $(basename https://www.netfilter.org/projects/libmnl/files/libmnl-1.0.5.tar.bz2)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

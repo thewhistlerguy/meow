@@ -1,0 +1,22 @@
+# meowspec.toml — libusb
+[package]
+name        = "libusb"
+version     = "1.0.27"
+release     = 1
+summary     = "C library for USB device access"
+description = "C library for USB device access"
+license     = "LGPL-2.1"
+homepage    = "https://libusb.info/"
+arch        = "x86_64"
+source_url  = "https://github.com/libusb/libusb/releases/download/v1.0.27/libusb-1.0.27.tar.bz2"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/libusb/libusb/releases/download/v1.0.27/libusb-1.0.27.tar.bz2)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

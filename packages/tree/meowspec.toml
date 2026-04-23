@@ -1,0 +1,22 @@
+# meowspec.toml — tree
+[package]
+name        = "tree"
+version     = "2.1.1"
+release     = 1
+summary     = "Recursive directory listing utility"
+description = "Recursive directory listing utility"
+license     = "GPL-2.0"
+homepage    = "http://mama.indstate.edu/users/ice/tree/"
+arch        = "x86_64"
+source_url  = "https://mama.indstate.edu/users/ice/tree/src/tree-2.1.1.tgz"
+sha256      = ""  # fill in after: sha256sum $(basename https://mama.indstate.edu/users/ice/tree/src/tree-2.1.1.tgz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

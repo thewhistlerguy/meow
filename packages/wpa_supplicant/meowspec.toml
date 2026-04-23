@@ -1,0 +1,23 @@
+# meowspec.toml — wpa_supplicant
+[package]
+name        = "wpa_supplicant"
+version     = "2.11"
+release     = 1
+summary     = "WPA/WPA2/IEEE 802.1X supplicant"
+description = "WPA/WPA2/IEEE 802.1X supplicant"
+license     = "BSD"
+homepage    = "https://w1.fi/wpa_supplicant/"
+arch        = "x86_64"
+source_url  = "https://w1.fi/releases/wpa_supplicant-2.11.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://w1.fi/releases/wpa_supplicant-2.11.tar.gz)
+
+depends = [
+  "musl",
+  "openssl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

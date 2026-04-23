@@ -1,0 +1,22 @@
+# meowspec.toml — xxhash
+[package]
+name        = "xxhash"
+version     = "0.8.2"
+release     = 1
+summary     = "Extremely fast non-cryptographic hash algorithm"
+description = "Extremely fast non-cryptographic hash algorithm"
+license     = "BSD-2-Clause"
+homepage    = "https://xxhash.com/"
+arch        = "x86_64"
+source_url  = "https://github.com/Cyan4973/xxHash/archive/v0.8.2/xxHash-0.8.2.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/Cyan4973/xxHash/archive/v0.8.2/xxHash-0.8.2.tar.gz)
+
+depends = [
+  "musl",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

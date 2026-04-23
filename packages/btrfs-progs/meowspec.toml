@@ -1,0 +1,27 @@
+# meowspec.toml — btrfs-progs
+[package]
+name        = "btrfs-progs"
+version     = "6.8.1"
+release     = 1
+summary     = "Btrfs filesystem utilities"
+description = "Btrfs filesystem utilities"
+license     = "GPL-2.0"
+homepage    = "https://btrfs.readthedocs.io/"
+arch        = "x86_64"
+source_url  = "https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v6.8.1.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://mirrors.edge.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v6.8.1.tar.xz)
+
+depends = [
+  "musl",
+  "util-linux",
+  "zlib",
+  "zstd",
+  "lz4",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "python",
+]
+provides  = []
+conflicts = []

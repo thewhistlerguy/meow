@@ -1,0 +1,24 @@
+# meowspec.toml — usbutils
+[package]
+name        = "usbutils"
+version     = "017"
+release     = 1
+summary     = "USB utilities (lsusb)"
+description = "USB utilities (lsusb)"
+license     = "GPL-2.0"
+homepage    = "https://github.com/gregkh/usbutils"
+arch        = "x86_64"
+source_url  = "https://mirrors.edge.kernel.org/pub/linux/utils/usb/usbutils/usbutils-017.tar.xz"
+sha256      = ""  # fill in after: sha256sum $(basename https://mirrors.edge.kernel.org/pub/linux/utils/usb/usbutils/usbutils-017.tar.xz)
+
+depends = [
+  "musl",
+  "libusb",
+]
+build_depends = [
+  "gcc",
+  "make",
+  "libusb-dev",
+]
+provides  = []
+conflicts = []

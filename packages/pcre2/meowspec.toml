@@ -1,0 +1,24 @@
+# meowspec.toml — pcre2
+[package]
+name        = "pcre2"
+version     = "10.43"
+release     = 1
+summary     = "Perl-compatible regular expressions library v2"
+description = "Perl-compatible regular expressions library v2"
+license     = "BSD-3-Clause"
+homepage    = "https://github.com/PCRE2Project/pcre2"
+arch        = "x86_64"
+source_url  = "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.43/pcre2-10.43.tar.bz2"
+sha256      = ""  # fill in after: sha256sum $(basename https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.43/pcre2-10.43.tar.bz2)
+
+depends = [
+  "musl",
+  "zlib",
+  "bzip2",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []

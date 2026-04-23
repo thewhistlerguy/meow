@@ -1,0 +1,27 @@
+# meowspec.toml — cmake
+[package]
+name        = "cmake"
+version     = "3.29.3"
+release     = 1
+summary     = "Cross-platform build system generator"
+description = "Cross-platform build system generator"
+license     = "BSD-3-Clause"
+homepage    = "https://cmake.org/"
+arch        = "x86_64"
+source_url  = "https://cmake.org/files/v3.29/cmake-3.29.3.tar.gz"
+sha256      = ""  # fill in after: sha256sum $(basename https://cmake.org/files/v3.29/cmake-3.29.3.tar.gz)
+
+depends = [
+  "musl",
+  "openssl",
+  "zlib",
+  "libxml2",
+  "curl",
+  "zstd",
+]
+build_depends = [
+  "gcc",
+  "make",
+]
+provides  = []
+conflicts = []
