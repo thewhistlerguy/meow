@@ -1,0 +1,11 @@
+[package]
+name        = "tar"
+version     = "1.35"
+release     = 1
+summary     = "GNU archiving utility"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz"
+sha256      = "4d62ff37342ec7aed748535323930c7cf94acf71c3591882b26a7ea50f3edc16"
+depends       = ["musl", "acl", "attr"]
+build_depends = ["gcc", "make"]
+provides      = []
