@@ -1,0 +1,11 @@
+[package]
+name        = "openssh"
+version     = "9.7p1"
+release     = 1
+summary     = "OpenSSH remote login client and server"
+license     = "BSD"
+source_url  = "https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.7p1.tar.gz"
+sha256      = "490af6f2a46f1f02c893e6cf39cd7ffdfcae13d69e53547f36d19e72b1c8fbd3"
+depends       = ["musl", "openssl", "zlib"]
+build_depends = ["gcc", "make"]
+provides      = []
