@@ -1,0 +1,11 @@
+[package]
+name        = "perl"
+version     = "5.38.2"
+release     = 1
+summary     = "Practical Extraction and Report Language"
+license     = "GPL-1.0"
+source_url  = "https://www.cpan.org/src/5.0/perl-5.38.2.tar.xz"
+sha256      = "49f87cf2b4b42b05f12ccf6b19c76f13c44d3a879cbf3b42a5fc9e74e37f3b68"
+depends       = ["musl", "zlib", "bzip2"]
+build_depends = ["gcc", "make"]
+provides      = []
