@@ -1,0 +1,11 @@
+[package]
+name        = "psmisc"
+version     = "23.7"
+release     = 1
+summary     = "Utilities that use the /proc filesystem"
+license     = "GPL-2.0"
+source_url  = "https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz"
+sha256      = "07c6ced2dc7b9ca17851cd24e2f2e33f48e2266999b10e4e4cc0fcaed09e1d5e"
+depends       = ["musl", "ncurses"]
+build_depends = ["gcc", "make"]
+provides      = []
