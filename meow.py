@@ -169,56 +169,69 @@ class InstallDB:
 
 # ── REPOSITORY ───────────────────────────────────────────────────
 
+# Predefined repos — only these are allowed.
+# To add a new official repo in the future, add it here.
+KNOWN_REPOS = {
+    "main": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/",
+}
+
 class RepoManager:
     """
     Manages repository definitions and cached package indexes.
-
-    Repo index format (JSON served at <repo_url>/index.json):
-    {
-      "packages": {
-        "bash": {"version": "5.2", "release": 1, "filename": "bash-5.2-1-x86_64.meow",
-                 "sha256": "...", "depends": [], ...},
-        ...
-      }
-    }
+    Repos are predefined in KNOWN_REPOS — users enable/disable them.
     """
 
     def __init__(self):
         REPO_DIR.mkdir(parents=True, exist_ok=True)
         REPO_CONF.parent.mkdir(parents=True, exist_ok=True)
-        self._repos = self._load_repos()
+        self._enabled = self._load_enabled()
 
-    def _load_repos(self) -> dict:
+    def _load_enabled(self):
         if not REPO_CONF.exists():
-            return {}
+            self._save_enabled({"main"})
+            return {"main"}
         if tomllib is None:
-            return {}
+            return {"main"}
         with open(REPO_CONF, "rb") as f:
-            return tomllib.load(f).get("repo", {})
+            data = tomllib.load(f)
+        return set(data.get("enabled", ["main"]))
 
-    def _save_repos(self):
-        lines = []
-        for name, url in self._repos.items():
-            lines.append(f'[repo.{name}]\nurl = "{url}"\n')
+    def _save_enabled(self, enabled=None):
+        if enabled is not None:
+            self._enabled = enabled
         with open(REPO_CONF, "w") as f:
-            f.write("\n".join(lines))
+            names = ", ".join(f'"{n}"' for n in sorted(self._enabled))
+            f.write(f"enabled = [{names}]\n")
 
-    def add(self, name: str, url: str):
-        self._repos[name] = url
-        self._save_repos()
-        ok(f"Added repo: {name} → {url}")
+    @property
+    def _repos(self):
+        return {n: u for n, u in KNOWN_REPOS.items() if n in self._enabled}
+
+    def enable(self, name):
+        if name not in KNOWN_REPOS:
+            err(f"Unknown repo: '{name}'. Available: {', '.join(KNOWN_REPOS)}")
+        self._enabled.add(name)
+        self._save_enabled()
+        ok(f"Enabled repo: {name} → {KNOWN_REPOS[name]}")
+
+    def disable(self, name):
+        if name not in KNOWN_REPOS:
+            err(f"Unknown repo: '{name}'. Available: {', '.join(KNOWN_REPOS)}")
+        self._enabled.discard(name)
+        self._save_enabled()
+        ok(f"Disabled repo: {name}")
 
     def list_repos(self):
-        if not self._repos:
-            print("  No repositories configured.")
-            return
-        for name, url in self._repos.items():
-            print(f"  {C.G}{name}{C.N}  {url}")
+        print(f"\n  Name             Status     URL")
+        print(f"  {chr(8212)*16} {chr(8212)*10} {chr(8212)*45}")
+        for name, url in KNOWN_REPOS.items():
+            status = f"{C.G}enabled{C.N}" if name in self._enabled else f"{C.Y}disabled{C.N}"
+            print(f"  {C.W}{name:<16}{C.N} {status:<18} {url}")
+        print()
 
     def update(self):
-        """Download fresh index.json from each repo."""
-        if not self._repos:
-            warn("No repos configured. Add one with: meow repo add <name> <url>")
+        if not self._enabled:
+            warn("No repos enabled. Run: meow repo enable main")
             return
         for name, url in self._repos.items():
             info(f"Syncing {name}...")
@@ -687,9 +700,11 @@ def main():
     # repo
     repo_p = sub.add_parser("repo", help="manage repositories")
     repo_sub = repo_p.add_subparsers(dest="repo_cmd")
-    p = repo_sub.add_parser("add", help="add a repository")
-    p.add_argument("name"); p.add_argument("url")
-    repo_sub.add_parser("list", help="list repositories")
+    repo_sub.add_parser("list", help="list available repositories")
+    p = repo_sub.add_parser("enable", help="enable a repository")
+    p.add_argument("name")
+    p = repo_sub.add_parser("disable", help="disable a repository")
+    p.add_argument("name")
 
     args = parser.parse_args()
     if not args.cmd:
@@ -716,10 +731,12 @@ def main():
             m.build(args.specfile, args.output)
         case "repo":
             match args.repo_cmd:
-                case "add":
-                    m.repo.add(args.name, args.url)
                 case "list":
                     m.repo.list_repos()
+                case "enable":
+                    m.repo.enable(args.name)
+                case "disable":
+                    m.repo.disable(args.name)
                 case _:
                     repo_p.print_help()
         case _:
