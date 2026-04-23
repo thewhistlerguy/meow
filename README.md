@@ -2,7 +2,7 @@
 
 "MEOW" is an fast package manager written in python for LFS systems.
 
-The command you can do with meow are down below.
+The commands you can do with meow are down below.
 
 ```
 meow install <pkg...>         install packages
@@ -13,8 +13,8 @@ meow search  <term>           search available packages
 meow list                     list installed packages
 meow info    <pkg>            show package details
 meow build   <meowspec.toml>  build a .meow from a spec
-meow repo add <n> <url>       register a repository
-meow repo list                list configured repositories
+meow repo enable <repo-name>  enable a repository
+meow repo disable <repo-name> disable a repository
 ```
 
 ## Creating a Package
