@@ -1,0 +1,11 @@
+[package]
+name        = "sqlite"
+version     = "3.45.3"
+release     = 1
+summary     = "Embedded SQL database engine"
+license     = "Public Domain"
+source_url  = "https://www.sqlite.org/2024/sqlite-autoconf-3450300.tar.gz"
+sha256      = "b2809ca53124c19c60f42bf627736eae011afdcc205bb48270a5ee9a38191531"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
