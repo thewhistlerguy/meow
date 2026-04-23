@@ -1,0 +1,11 @@
+[package]
+name        = "openssl"
+version     = "3.3.0"
+release     = 1
+summary     = "Cryptography and SSL/TLS toolkit"
+license     = "Apache-2.0"
+source_url  = "https://www.openssl.org/source/openssl-3.3.0.tar.gz"
+sha256      = "53e66b043322a606abf0087e7699a0e033a37fa13feb9742df35c3a33b18fb02"
+depends       = ["musl", "zlib"]
+build_depends = ["gcc", "make", "perl"]
+provides      = []
