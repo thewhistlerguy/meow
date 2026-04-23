@@ -1,0 +1,11 @@
+[package]
+name        = "patch"
+version     = "2.7.6"
+release     = 1
+summary     = "Apply diff files to originals"
+license     = "GPL-3.0"
+source_url  = "https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz"
+sha256      = "ac610bda97abe0d9f6b7c963255a11f89e88b79e9f65d4c1c39f3e26b27cfb97"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = []
