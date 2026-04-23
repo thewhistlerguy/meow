@@ -1,0 +1,11 @@
+[package]
+name        = "python"
+version     = "3.12.3"
+release     = 1
+summary     = "Python programming language interpreter"
+license     = "PSF-2.0"
+source_url  = "https://www.python.org/ftp/python/3.12.3/Python-3.12.3.tar.xz"
+sha256      = "56bfef1fdfc1221ce6720e43a661e3eb41785dd914ce99698d8c7896af4bdaa1"
+depends       = ["musl", "zlib", "bzip2", "xz", "libffi", "openssl", "sqlite", "ncurses", "readline"]
+build_depends = ["gcc", "make"]
+provides      = []
