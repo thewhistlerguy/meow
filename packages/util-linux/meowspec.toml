@@ -1,0 +1,11 @@
+[package]
+name        = "util-linux"
+version     = "2.40"
+release     = 1
+summary     = "Miscellaneous Linux system utilities"
+license     = "GPL-2.0"
+source_url  = "https://www.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.tar.xz"
+sha256      = "a09adbe939c5c63bc5bd0f0427ff42d9c6451b84e78f12cf44f0b8f3cfb39e39"
+depends       = ["musl", "ncurses", "readline", "zlib"]
+build_depends = ["gcc", "make"]
+provides      = []
