@@ -1,0 +1,11 @@
+[package]
+name        = "pkgconf"
+version     = "2.2.0"
+release     = 1
+summary     = "Package compiler and linker flags helper"
+license     = "ISC"
+source_url  = "https://distfiles.ariadne.space/pkgconf/pkgconf-2.2.0.tar.xz"
+sha256      = "17b9f2f954f66d67f58a2fd05cefb0d2c1ad5e1d50b5c8e2fc8f2efc11c2c8b9"
+depends       = ["musl"]
+build_depends = ["gcc", "make"]
+provides      = ["pkg-config"]
