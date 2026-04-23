@@ -1,0 +1,11 @@
+[package]
+name        = "procps-ng"
+version     = "4.0.4"
+release     = 1
+summary     = "Utilities for monitoring processes"
+license     = "GPL-2.0"
+source_url  = "https://sourceforge.net/projects/procps-ng/files/Production/procps-4.0.4.tar.xz"
+sha256      = "697b9d8b7b5c5b7af79d4db0c01e8f31c7d27f51c7a4bcc51c48a61c25434a6"
+depends       = ["musl", "ncurses"]
+build_depends = ["gcc", "make"]
+provides      = []
