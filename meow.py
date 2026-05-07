@@ -9,16 +9,18 @@ Database       : /var/lib/meow/
 Repo cache     : /var/cache/meow/
 
 Usage:
-  meow install <pkg>        install a package
-  meow remove  <pkg>        remove a package
-  meow update               sync repo index
-  meow upgrade              upgrade all installed packages
-  meow search  <term>       search available packages
-  meow list                 list installed packages
-  meow info    <pkg>        show package details
-  meow build   <specfile>   build a .meow from a meowspec.toml
-  meow repo add <name> <url> add a repository
-  meow repo list             list repos
+  meow install <pkg>              install a package
+  meow remove  <pkg>              remove a package
+  meow update                     sync repo index
+  meow upgrade                    upgrade all installed packages
+  meow search  <term>             search available packages
+  meow list                       list installed packages
+  meow info    <pkg>              show package details
+  meow build   <specfile>         build a .meow from a meowspec.toml
+  meow strap   <dir> <pkg...>    bootstrap packages into a target root (like pacstrap)
+  meow repo enable  <name>        enable a repository
+  meow repo disable <name>        disable a repository
+  meow repo list                  list repos
 """
 
 import argparse
@@ -131,18 +133,21 @@ class PackageMeta:
 class InstallDB:
     """Tracks installed packages in /var/lib/meow/installed.json"""
 
-    def __init__(self):
-        DB_DIR.mkdir(parents=True, exist_ok=True)
+    def __init__(self, root: Path = None):
+        _root = root or ROOT
+        _db_dir = _root / "var/lib/meow"
+        _db_dir.mkdir(parents=True, exist_ok=True)
+        self._install_db = _db_dir / "installed.json"
         self._data: dict = {}
         self._load()
 
     def _load(self):
-        if INSTALL_DB.exists():
-            with open(INSTALL_DB) as f:
+        if self._install_db.exists():
+            with open(self._install_db) as f:
                 self._data = json.load(f)
 
     def _save(self):
-        with open(INSTALL_DB, "w") as f:
+        with open(self._install_db, "w") as f:
             json.dump(self._data, f, indent=2)
 
     def is_installed(self, name: str) -> bool:
@@ -172,7 +177,8 @@ class InstallDB:
 # Predefined repos — only these are allowed.
 # To add a new official repo in the future, add it here.
 KNOWN_REPOS = {
-    "main": "https://raw.githubusercontent.com/thewhistlerguy/meow/main/",
+    "main":   "https://raw.githubusercontent.com/thewhistlerguy/meow/main/",
+    "meow-x": "https://raw.githubusercontent.com/thewhistlerguy/meow-X-repo/main/",
 }
 
 class RepoManager:
@@ -413,8 +419,9 @@ class Resolver:
 
 class Meow:
 
-    def __init__(self):
-        self.db   = InstallDB()
+    def __init__(self, root: Path = None):
+        self._root = root or ROOT
+        self.db   = InstallDB(self._root)
         self.repo = RepoManager()
 
     # ── install ─────────────────────────────────────────────────
@@ -455,7 +462,7 @@ class Meow:
                 err(f"{name} conflicts with installed package: {conflict}")
 
         meow_path = self.repo.download(pkg_info)
-        meta, files = MeowArchive.unpack(meow_path, ROOT)
+        meta, files = MeowArchive.unpack(meow_path, self._root)
         self.db.record(meta, files)
         ok(f"Installed {name}-{meta.evr}")
 
@@ -567,6 +574,51 @@ class Meow:
   Description:
     {meta.description or '—'}
 """)
+
+    # ── strap (pacstrap/basestrap-style bootstrap) ───────────────
+    def strap(self, target: Path, names: list[str], yes: bool = False):
+        """
+        Bootstrap packages into *target* — like pacstrap / basestrap.
+
+        Creates a self-contained root at *target* with its own meow DB
+        so it can later be chrooted or used as a system image.
+        """
+        target = target.resolve()
+        section(f"Strapping into {target}")
+
+        if not target.exists():
+            info(f"Creating target directory: {target}")
+            target.mkdir(parents=True)
+
+        # Resolve deps against the TARGET's own DB (so already-strapped
+        # packages are not re-installed).
+        target_db   = InstallDB(target)
+        target_meow = Meow(root=target)
+
+        resolver = Resolver(self.repo, target_db)
+        to_install = resolver.resolve(names)
+
+        if not to_install:
+            ok("Nothing to do — all requested packages already present in target.")
+            return
+
+        print(f"\n  Target  : {C.W}{target}{C.N}")
+        print(f"  Packages to strap ({len(to_install)}):")
+        for n in to_install:
+            pkg = self.repo.find(n)
+            ver = f"{pkg['version']}-{pkg['release']}" if pkg else "?"
+            print(f"    {C.G}{n}{C.N}  {ver}")
+
+        if not yes:
+            ans = input("\n  Continue? [Y/n] ").strip().lower()
+            if ans and ans != "y":
+                print("  Aborted.")
+                return
+
+        for name in to_install:
+            target_meow._install_one(name)
+
+        ok(f"Strap complete → {target}")
 
     # ── build from meowspec.toml ──────────────────────────────────
     def build(self, specfile: Path, output_dir: Path):
@@ -697,6 +749,13 @@ def main():
     p.add_argument("-o", "--output", type=Path, default=Path("."),
                    help="output directory (default: .)")
 
+    # strap
+    p = sub.add_parser("strap", help="bootstrap packages into a target root (like pacstrap)")
+    p.add_argument("target", type=Path, metavar="<target_dir>",
+                   help="directory to bootstrap into")
+    p.add_argument("packages", nargs="+", metavar="<pkg>")
+    p.add_argument("-y", "--yes", action="store_true")
+
     # repo
     repo_p = sub.add_parser("repo", help="manage repositories")
     repo_sub = repo_p.add_subparsers(dest="repo_cmd")
@@ -727,6 +786,8 @@ def main():
             m.list_installed()
         case "info":
             m.info(args.package)
+        case "strap":
+            m.strap(args.target, args.packages, yes=args.yes)
         case "build":
             m.build(args.specfile, args.output)
         case "repo":
